@@ -2,6 +2,23 @@
 # Nomes: Alessandro da Silva Moreira, Gabriel Anselmo, Leon Antonio
 # Turma: 2º Informática
 
+"""
+    3 - Refatorando
+
+        a) Alteração do número total de vagas, dos emails dos estudantes e o preço das oficinas
+
+        b) Curso. Pois o número de vagas pode ser alterado dentro da própria classe somente.
+
+        c) Vagas e preço da classe Curso, saldo da classe Participante. Ambos os setters seriam validados se fossem
+        maior do que 0.
+"""
+
+"""
+    4 - Codificar
+
+        código abaixo:
+"""
+
 class Participante:
     def __init__(self, nome, email, saldo):
         self.nome = nome
