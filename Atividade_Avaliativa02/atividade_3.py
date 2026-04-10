@@ -1,3 +1,7 @@
+# Atividade 3
+# Nomes: Alessandro da Silva Moreira, Gabriel Anselmo, Leon Antonio
+# Turma: 2º Informática
+
 class Participante:
     def __init__(self, nome, email, saldo):
         self.nome = nome
@@ -9,7 +13,7 @@ class Participante:
         return self.__saldo
     
     @saldo.setter
-    def adicionar_credito(self, valor):
+    def saldo(self, valor):
         if valor > 0:
             self.__saldo += valor
         else:
@@ -26,6 +30,9 @@ class Curso:
         self.titulo = titulo
         self.__preco = preco 
         self.__vagas = vagas
+        if self.__preco < 0:
+            print(f"Erro. O preço da oficina não pode ser negativo!")
+            self.__preco = 0
     
     @property
     def preco(self):
@@ -42,7 +49,6 @@ class Curso:
     def vagas(self):
         return self.__vagas
 
-    @vagas.setter
     def reservar_vaga(self):
         if self.__vagas > 0:
             self.__vagas -= 1
@@ -53,10 +59,29 @@ class Inscricao:
     def __init__(self):
         pass
 
-    def confirmar(participante, oficina):
+    def confirmar(self, participante, oficina):
         if participante.saldo >= oficina.preco and oficina.vagas > 0:
             oficina.reservar_vaga()
-            participante.cobrar()
+            participante.cobrar(oficina.preco)
+            print(f"O participante {participante.nome} foi inscrito.")
+            print(f"Saldo do participante: {participante.saldo}")
+            print(f"Vagas da oficina: {oficina.vagas}")
+        else:
+            print(f"Não é possível inscrever o participante {participante.nome}")
 
-p1 = Participante("Davi", "davi@email.com", 10.0)
-oficina_python = Curso("Python Básico", -50.0, 5)
+# participantes
+gabriel_anselmo = Participante("Gabriel Anselmo", "gabrielanselmo@email.com", 50.0)
+leon = Participante("Leon", "leontpb@gmail.com", 50)
+
+# cursos
+oficina_python = Curso("Python Básico", 30.0, 5)
+oficina_cpp = Curso("C++ Básico", 30.0, 1)
+
+# classe complementar
+inscricao = Inscricao()
+inscricao.confirmar(gabriel_anselmo, oficina_python)
+
+inscricao.confirmar(leon, oficina_cpp)
+inscricao.confirmar(gabriel_anselmo, oficina_cpp) # o código avisa que não foi possível escrever
+
+# gabriel_anselmo.__saldo = 10000 - python ignorou
