@@ -1,6 +1,15 @@
 # Atividade 1
-# Nomes: Alessandro da Silva Moreira, Gabriel Anselmo e Leon Antonio
+# Nomes: Alessandro da Silva Moreira, Gabriel Anselmo, Leon Antonio
 # Turma: 2º Informática
+
+"""
+    1) O "Hacker" do Ônibus
+
+        a) O erro cometido foi não tornar o atributo "saldo" como privado. O uso de atributo privado impediria esse problema,
+        uma vez que o uso de atributos privados impede sua alteração por qualquer um.
+
+        b) código abaixo.
+"""
 
 class CartaoTransporte:
     def __init__(self, id, saldo=0):
