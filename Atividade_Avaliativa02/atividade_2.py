@@ -1,6 +1,10 @@
 # Atividade 2
-# Nomes: Alessandro da Silva Moreira, Gabriel Anselmo e Leon Antonio
+# Nomes: Alessandro da Silva Moreira, Gabriel Anselmo, Leon Antonio
 # Turma: 2º Informática
+
+"""
+   2 - Lógica de Proteção 
+"""
 
 class PatineteEletrico:
     def __init__(self, id, velocidade=0):
