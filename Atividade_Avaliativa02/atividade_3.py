@@ -80,11 +80,11 @@ class Inscricao:
         if participante.saldo >= oficina.preco and oficina.vagas > 0:
             oficina.reservar_vaga()
             participante.cobrar(oficina.preco)
-            print(f"O participante {participante.nome} foi inscrito.")
+            print(f"\nO participante {participante.nome} foi inscrito.")
             print(f"Saldo do participante: {participante.saldo}")
-            print(f"Vagas da oficina: {oficina.vagas}")
+            print(f"Vagas da oficina {oficina.titulo}: {oficina.vagas}")
         else:
-            print(f"Não é possível inscrever o participante {participante.nome}")
+            print(f"\nNão é possível inscrever o participante {participante.nome} em {oficina.titulo}")
 
 # participantes
 gabriel_anselmo = Participante("Gabriel Anselmo", "gabrielanselmo@email.com", 50.0)
