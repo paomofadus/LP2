@@ -1,3 +1,6 @@
+# Nomes: Alessandro da Silva Moreira e Dante Venga Dias
+# Turma: 2º Informática
+
 class Musica:
     def __init__(self, duracao_segundos, artista, titulo):
         self.duracao_segundos = duracao_segundos
