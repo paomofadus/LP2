@@ -1,3 +1,6 @@
+# Nomes: Alessandro da Silva Moreira e Dante Venga Dias
+# Turma: 2º Informática
+
 class Aluno:
     def __init__(self, nome, matricula):
         self.nome = nome
