@@ -1,3 +1,6 @@
+# Nomes: Alessandro da Silva Moreira e Dante Venga Dias
+# Turma: 2º Informática
+
 class Carga:
     def __init__(self, descricao, peso_kg):
         self.descricao = descricao
