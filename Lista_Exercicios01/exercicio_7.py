@@ -1,3 +1,6 @@
+# Nomes: Alessandro da Silva Moreira e Dante Venga Dias
+# Turma: 2º Informática
+
 class Produto:
     def __init__(self, nome, preco):
         self.nome = nome
