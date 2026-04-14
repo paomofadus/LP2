@@ -1,3 +1,6 @@
+# Nomes: Alessandro da Silva Moreira e Dante Venga Dias
+# Turma: 2º Informática
+
 class Termostato:
     def __init__(self, temperatura_atual):
         self.temperatura_atual = temperatura_atual
